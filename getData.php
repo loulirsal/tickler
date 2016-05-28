@@ -6,7 +6,15 @@
 
 		require_once('../dbConnect.php');
 
-		$sql = "SELECT * FROM tableros";
+    switch ($id) {
+  	  case 1:
+		  	$sql = "SELECT * FROM tableros";
+  		 break;
+
+  	  default:
+  			$sql = "SELECT * FROM equipos";
+  		 break;
+    }
 
 		$r = mysqli_query($con,$sql);
 
