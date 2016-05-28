@@ -30,12 +30,14 @@
 
 				$result = array();
 
-				array_push($result,array(
-					"nombre_equipo"=>$res['nombre_equipo'],
-					"nombre_usu"=>$res['nombre_usu']
-					)
-				);
-  		 break;
+        while ($row = mysqli_fetch_array($r)){
+				  array_push($result,array(
+				  	"nombre_equipo"=>$res['nombre_equipo'],
+				 	  "nombre_usu"=>$res['nombre_usu']
+					  )
+				  );
+			  }
+  		  break;
     }
 
 
