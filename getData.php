@@ -22,11 +22,14 @@
 
 		$result = array();
 
-		array_push($result,array(
+	/*	array_push($result,array(
 			"nombre"=>$res['nombre'],
 			"nombre_equipo"=>$res['nombre_equipo']
 			)
-		);
+		);*/
+		array_push($result,array(
+				$res
+				)
 
 		echo json_encode(array("result"=>$result));
 
