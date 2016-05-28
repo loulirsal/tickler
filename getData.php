@@ -30,10 +30,10 @@
 
 				$result = array();
 
-        while($row = $result->fetch_assoc()) ){
+        while($row = $r->fetch_assoc()){
 				  array_push($result,array(
-				  	"nombre_equipo"=>$res['nombre_equipo'],
-				 	  "nombre_usu"=>$res['nombre_usu']
+				  	"nombre_equipo"=>$row['nombre_equipo'],
+				 	  "nombre_usu"=>$row['nombre_usu']
 					  )
 				  );
 			  }
