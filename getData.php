@@ -9,7 +9,27 @@
     switch ($id) {
   	  case 1:
 		  	$sql = "SELECT * FROM equipos";
-				$r = mysqli_query($con,$sql);
+
+				$res = $conn->query($sql);
+				$result = array();
+
+				if ($res->num_rows > 0) {
+				     // output data of each row
+				     while($row = $res->fetch_assoc()) {
+							 array_push($result,array(
+		 			            "nombre"=>$row['nombre'],
+		 				     )
+							 );
+				     }
+				} else {
+				     echo "0 results";
+				}
+
+
+
+
+
+			/*	$r = mysqli_query($con,$sql);
 
 				$res = mysqli_fetch_array($r);
 
@@ -19,7 +39,7 @@
 			            "nombre"=>$row['nombre'],
 				    )
          			  );
-				 }while($row = $r->fetch_assoc());
+				 }while($row = $r->fetch_assoc());*/
   		 break;
 
   	  default:
