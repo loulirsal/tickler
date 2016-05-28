@@ -16,10 +16,11 @@
 				$result = array();
 				while($row = $r->fetch_assoc()){
 				  array_push($result,array(
-                                        "nombre"=>$row['nombre']
-                                          )
-                                  );
-				}
+            "nombre"=>$row['nombre'],
+						"nombre_equipo"=>$row['nombre_equipo']
+            )
+          );
+				 }
   		 break;
 
   	  default:
