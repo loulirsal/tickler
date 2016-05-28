@@ -8,19 +8,18 @@
 
     switch ($id) {
   	  case 1:
-		  	$sql = "SELECT * FROM tableros";
+		  	$sql = "SELECT * FROM equipos";
 				$r = mysqli_query($con,$sql);
 
 				$res = mysqli_fetch_array($r);
 
 				$result = array();
-				while($row = $r->fetch_assoc()){
+				do{
 				  array_push($result,array(
-            "nombre"=>$row['nombre'],
-						"nombre_equipo"=>$row['nombre_equipo']
-            )
-          );
-				 }
+			            "nombre"=>$row['nombre'],
+				    )
+         			  );
+				 }while($row = $r->fetch_assoc());
   		 break;
 
   	  default:
