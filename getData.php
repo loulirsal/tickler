@@ -14,12 +14,12 @@
 				$res = mysqli_fetch_array($r);
 
 				$result = array();
-
-				array_push($result,array(
-					"nombre"=>$res['nombre'],
-					"nombre_equipo"=>$res['nombre_equipo']
-					)
-				);
+				while($row = $r->fetch_assoc()){
+				  array_push($result,array(
+                                        "nombre"=>$row['nombre']
+                                          )
+                                  );
+				}
   		 break;
 
   	  default:
