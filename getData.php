@@ -30,7 +30,7 @@
 
 				$result = array();
 
-        while ($row = mysqli_fetch_array($r)){
+        while($row = $result->fetch_assoc()) ){
 				  array_push($result,array(
 				  	"nombre_equipo"=>$res['nombre_equipo'],
 				 	  "nombre_usu"=>$res['nombre_usu']
