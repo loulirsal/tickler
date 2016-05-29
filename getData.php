@@ -53,7 +53,6 @@
 				$res = mysqli_fetch_array($r);
 
 				$result = array();
-
         while($row = $r->fetch_assoc()){
 				  array_push($result,array(
 				  	"nombre_equipo"=>$row['nombre_equipo'],
