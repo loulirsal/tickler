@@ -15,7 +15,7 @@
 
 				$result = array();
 
-				if ($res->num_rows > 0) {
+				if ($r->num_rows > 0) {
 					while($row = mysqli_fetch_assoc($r)){
 						array_push($result,array(
 							"nombre"=>$row['nombre'],
