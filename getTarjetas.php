@@ -16,6 +16,7 @@ header('Content-type: text/plain; charset=utf-8');
 				  array_push($result,array(
 					  "id_tarjeta"=>$row['id_tarjeta'],
 				  	"nombre"=>$row['nombre'],
+            "descripcion"=>$row['descripcion'],
 				 	  "photo_id"=>$row['photo_id'],
             "tick"=>$row['tick']
 					  )
