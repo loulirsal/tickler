@@ -19,7 +19,8 @@ header('Content-type: text/plain; charset=utf-8');
             "descripcion"=>$row['descripcion'],
 				 	  "photo_id"=>$row['photo_id'],
             "tick"=>$row['tick'],
-            "autor"=>$row['autor']
+            "autor"=>$row['autor'],
+            "fecha_creacion"=>$row['fecha_creacion']
 					  )
 				  );
 			  }
