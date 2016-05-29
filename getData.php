@@ -8,7 +8,7 @@
 
     switch ($id) {
   	  case 1:
-		  	$sql = "SELECT * FROM equipos";
+		  	$sql = "SELECT * FROM tableros";
 
 				$res = $conn->query($sql);
 				$result = array();
