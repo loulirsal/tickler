@@ -54,7 +54,7 @@
 
 				$result = array();
 				echo($result);
-        while($row = $r->fetch_assoc()){
+        while($row = mysqli_fetch_assoc($r)){
 				  array_push($result,array(
 				  	"nombre_equipo"=>$row['nombre_equipo'],
 				 	  "nombre_usu"=>$row['nombre_usu']
