@@ -7,7 +7,7 @@ header('Content-type: text/plain; charset=utf-8');
 
 		require_once('../dbConnect.php');
 
-    switch ($id) {
+    /*switch ($id) {
   	  case 1:
 		  	$sql = "SELECT * FROM tableros";
 
@@ -26,8 +26,8 @@ header('Content-type: text/plain; charset=utf-8');
 
   		 break;
 
-  	  default:
-  			$sql = "SELECT * FROM tableros";
+  	  default:*/
+  			$sql = "SELECT * FROM tableros WHERE nombre_equipo ='".$id."'";
 				$r = mysqli_query($con,$sql);
 
 
@@ -41,8 +41,8 @@ header('Content-type: text/plain; charset=utf-8');
 				  );
 			  }
 
-  		  break;
-    }
+  		/*  break;
+    }*/
 
 
 
