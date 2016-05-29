@@ -18,7 +18,7 @@ header('Content-type: text/plain; charset=utf-8');
 				  	"nombre"=>$row['nombre'],
             "descripcion"=>$row['descripcion'],
 				 	  "photo_id"=>$row['photo_id'],
-            "tick"=>$row['tick']
+            "tick"=>$row['tick'],
             "autor"=>$row['autor']
 					  )
 				  );
