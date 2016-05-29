@@ -1,7 +1,7 @@
 <?php
 header('Content-type: text/plain; charset=utf-8');
 
-	if($_SERVER['REQUEST_METHOD']=='POST'){
+	/*if($_SERVER['REQUEST_METHOD']=='POST'){
 
     $id  = $_POST['id'];
     $tick = $_POST['tick'];
@@ -19,17 +19,15 @@ echo "hoola";
     }else{
         echo 'Error : ('. $mysqli->errno .') '. $mysqli->error;
     }
-
-/*
-  		//	$sql = "SELECT * FROM tarjetas WHERE id_ref ='".$id."'";
-        $sql = "UPDATE tarjetas SET tick=".$tick.", photo_id=".$color." where id_tarjeta=".$id.;
-
-        if (mysqli_query($con, $sql)) {
-          echo "Record updated successfully";
-        } else {
-          echo "Error updating record: " . mysqli_error($con);
-        }
 */
+$stmt = $mysqli->prepare("UPDATE tarjetas SET tick=?,
+   photo_id=?
+   WHERE id_tarjeta=?);
+$stmt->bind_param('iii',
+   $_POST['tick'],
+   $_POST['photo_id'],
+   $_POST['id_tarjeta']);
+	 $stmt->execute();
 
 		mysqli_close($con);
 
