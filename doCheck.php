@@ -15,9 +15,9 @@ header('Content-type: text/plain; charset=utf-8');
     $statement->bind_param('ssi', $tick, $photo_id, $id);
     $results =  $statement->execute();
     if($results){
-        print 'Success! record updated';
+        echo 'Success! record updated';
     }else{
-        print 'Error : ('. $mysqli->errno .') '. $mysqli->error;
+        echo 'Error : ('. $mysqli->errno .') '. $mysqli->error;
     }
 
 /*
