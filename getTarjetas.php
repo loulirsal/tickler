@@ -10,7 +10,6 @@ header('Content-type: text/plain; charset=utf-8');
   			$sql = "SELECT * FROM tarjetas WHERE id_ref ='".$id."'";
 				$r = mysqli_query($con,$sql);
 
-        rs.getInt("id_tarjeta"),rs.getString("nombre"),rs.getInt("photo_id"),rs.getString("descripcion"),rs.getInt("tick"));
 
 				$result = array();
         while($row = mysqli_fetch_assoc($r)){
