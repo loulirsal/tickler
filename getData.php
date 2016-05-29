@@ -50,9 +50,6 @@
 
 				$result = array();
 
-				array_push($result,array(
-					"nombre_equipo"=>$row['nombre_equipo'],
-					"nombre_usu"=>$row['nombre_usu']
         while($row = $r->fetch_assoc()){
 				  array_push($result,array(
 				  	"nombre_equipo"=>$row['nombre_equipo'],
