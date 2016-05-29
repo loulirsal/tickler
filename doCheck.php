@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
  require_once('dbConnect.php');
 
  //Creating sql query
- $sql = "UPDATE tarjetas SET tick = $tick,  photo_id=$color WHERE id = $id";
+ $sql = "UPDATE tarjetas SET tick =0,  photo_id=2130837582 WHERE id = 17";
 
  //Updating database table
  if (mysqli_query($con,$sql)) {
