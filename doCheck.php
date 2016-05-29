@@ -12,7 +12,7 @@ header('Content-type: text/plain; charset=utf-8');
     $statement = $mysqli->prepare("UPDATE tarjetas SET tick=?, photo_id=? WHERE id_tarjeta=?");
 
     //bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
-    $statement->bind_param('ssi', $tick, $photo_id, $id);
+    $statement->bind_param('iii', $tick, $photo_id, $id);
     $results =  $statement->execute();
     if($results){
         echo 'Success! record updated';
