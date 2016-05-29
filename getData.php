@@ -15,6 +15,10 @@
 
 				if ($res->num_rows > 0) {
 				     // output data of each row
+						 array_push($result,array(
+										"nombre"=>$row['nombre'],
+							 )
+						 );
 				     while($row = $res->fetch_assoc()) {
 							 array_push($result,array(
 		 			            "nombre"=>$row['nombre'],
