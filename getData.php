@@ -1,4 +1,4 @@
-<?php 
+<?php
 header('Content-type: text/plain; charset=utf-8');
 
 	if($_SERVER['REQUEST_METHOD']=='GET'){
@@ -23,7 +23,7 @@ header('Content-type: text/plain; charset=utf-8');
 							)
 						);
 					}
-		
+
   		 break;
 
   	  default:
@@ -33,11 +33,8 @@ header('Content-type: text/plain; charset=utf-8');
 
 				$result = array();
         while($row = mysqli_fetch_assoc($r)){
-          $nombre = "". $row["nombre"] ."";
-	$name = "holita";
-echo $nombre;
 				  array_push($result,array(
-					"nombre"=>$name,
+					  "nombre"=>$row['nombre'],
 				  	"nombre_equipo"=>$row['nombre_equipo'],
 				 	  "id_tablero"=>$row['id_tablero']
 					  )
