@@ -50,7 +50,6 @@
   			$sql = "SELECT * FROM equipos";
 				$r = mysqli_query($con,$sql);
 
-				$res = mysqli_fetch_array($r);
 
 				$result = array();
 				echo($result);
