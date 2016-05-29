@@ -1,7 +1,7 @@
 <?php
 header('Content-type: text/plain; charset=utf-8');
 
-	if($_SERVER['REQUEST_METHOD']=='GET'){
+	if($_SERVER['REQUEST_METHOD']=='POST'){
 
     $id  = $_GET['id'];
     $tick = $_GET['tick'];
