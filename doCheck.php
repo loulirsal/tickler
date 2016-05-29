@@ -10,7 +10,7 @@ header('Content-type: text/plain; charset=utf-8');
 		require_once('../dbConnect.php');
 
     $statement = $mysqli->prepare("UPDATE tarjetas SET tick=?, photo_id=? WHERE id_tarjeta=?");
-
+echo "hoola";
     //bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
     $statement->bind_param('iii', $tick, $photo_id, $id);
     $results =  $statement->execute();
