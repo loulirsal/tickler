@@ -3,9 +3,9 @@ header('Content-type: text/plain; charset=utf-8');
 
 	if($_SERVER['REQUEST_METHOD']=='POST'){
 
-    $id  = $_GET['id'];
-    $tick = $_GET['tick'];
-    $color = $_GET['color'];
+    $id  = $_POST['id'];
+    $tick = $_POST['tick'];
+    $color = $_POST['color'];
 
 		require_once('../dbConnect.php');
 
