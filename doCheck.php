@@ -29,6 +29,8 @@ $stmt->bind_param('iii',
    $_POST['color'],
    $_POST['id']);
 
+	 require_once('../dbConnect.php');
+
 	 $stmt->execute();
  }else{
 echo 'error';
