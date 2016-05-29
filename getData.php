@@ -8,7 +8,7 @@
 
     switch ($id) {
   	  case 1:
-		  	$sql = "SELECT * FROM tableros";
+		  	$sql = "SELECT * FROM equipos";
 
 				$res = $conn->query($sql);
 				$result = array();
@@ -16,7 +16,7 @@
 				if ($res->num_rows > 0) {
 					while($row = mysqli_fetch_assoc($r)){
 						array_push($result,array(
-							"nombre"=>$row['nombre'],
+							"nombre_equipo"=>$row['nombre_equipo'],
 							)
 						);
 					}
