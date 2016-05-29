@@ -20,6 +20,7 @@ echo "hoola";
         echo 'Error : ('. $mysqli->errno .') '. $mysqli->error;
     }
 */
+if($_SERVER['REQUEST_METHOD']=='POST'){
 $stmt = $mysqli->prepare("UPDATE tarjetas SET tick=?,
    photo_id=?
    WHERE id_tarjeta=?");
@@ -29,5 +30,8 @@ $stmt->bind_param('iii',
    $_POST['id']);
 
 	 $stmt->execute();
+ }else{
+echo 'error';
+}
 
 		mysqli_close($con);
