@@ -26,7 +26,7 @@ $stmt = $mysqli->prepare("UPDATE tarjetas SET tick=?,
 $stmt->bind_param('iii',
    $_POST['tick'],
    $_POST['color'],
-   $_POST['id_tarjeta']);
+   $_POST['id']);
 	 $stmt->execute();
 
 		mysqli_close($con);
